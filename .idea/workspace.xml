@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4448b5b5-5cd7-4114-8650-95fa4cd7d905" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ktMG2UncZfdBx5XIJIyUtMufxh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FingerCursor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Final" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/FingerCursor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.FingerCursor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4448b5b5-5cd7-4114-8650-95fa4cd7d905" name="Default Changelist" comment="" />
+      <created>1606515335378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606515335378</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="470" key="GridCell.Tab.0.bottom" timestamp="1606790350108">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.0.bottom/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350108" />
+    <state width="1259" height="383" key="GridCell.Tab.0.bottom/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606720439433" />
+    <state width="1259" height="470" key="GridCell.Tab.0.center" timestamp="1606790350107">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.0.center/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350107" />
+    <state width="1259" height="383" key="GridCell.Tab.0.center/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606720439432" />
+    <state width="1259" height="470" key="GridCell.Tab.0.left" timestamp="1606790350106">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.0.left/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350106" />
+    <state width="1259" height="383" key="GridCell.Tab.0.left/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606720439430" />
+    <state width="1259" height="470" key="GridCell.Tab.0.right" timestamp="1606790350107">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.0.right/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350107" />
+    <state width="1259" height="383" key="GridCell.Tab.0.right/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606720439432" />
+    <state width="1259" height="470" key="GridCell.Tab.1.bottom" timestamp="1606790350114">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.1.bottom/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350114" />
+    <state width="1259" height="470" key="GridCell.Tab.1.bottom/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606718536126" />
+    <state width="1259" height="470" key="GridCell.Tab.1.center" timestamp="1606790350111">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.1.center/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350111" />
+    <state width="1259" height="470" key="GridCell.Tab.1.center/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606718536125" />
+    <state width="1259" height="470" key="GridCell.Tab.1.left" timestamp="1606790350109">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.1.left/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350109" />
+    <state width="1259" height="470" key="GridCell.Tab.1.left/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606718536124" />
+    <state width="1259" height="470" key="GridCell.Tab.1.right" timestamp="1606790350112">
+      <screen x="-680" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="1259" height="470" key="GridCell.Tab.1.right/0.23.1280.716/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606790350112" />
+    <state width="1259" height="470" key="GridCell.Tab.1.right/0.23.1280.721/-680.-1417.2560.1417@-680.-1417.2560.1417" timestamp="1606718536126" />
+    <state x="317" y="212" key="com.intellij.ide.util.TipDialog" timestamp="1606515382302">
+      <screen x="0" y="23" width="1280" height="713" />
+    </state>
+    <state x="317" y="212" key="com.intellij.ide.util.TipDialog/0.23.1280.713@0.23.1280.713" timestamp="1606515382302" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/FingerCursor.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/FingerCursor.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/FingerCursor.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
