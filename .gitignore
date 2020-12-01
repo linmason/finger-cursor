@@ -1,2 +1,5 @@
 *.mp4
-*.results/final
+results/final/*
+results/intermediate/*
+data/obsolete/*
+.DS_Store
