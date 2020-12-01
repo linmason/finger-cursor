@@ -6,18 +6,22 @@ import math
 from sklearn.cluster import KMeans
 import os
 from SkinSegmentation import ColorDetector
+import math
 
 
 class FingerTracker:
 
     # Contours of template gestures
     template_contours = []
+    drawing_pts = []
 
-    # Tracking information
+    # Tracking information for each image
     topmost = ()
     gesture = 0
+    largest_contour = []
 
-    def __init__(self, morph_op, edge_det, track_method, match_method, min_skin_hsv=[0,48,80], max_skin_hsv=[20, 255, 255]):
+
+    def __init__(self, morph_op, edge_det, track_method, match_method, min_skin_hsv=[0,60,80], max_skin_hsv=[20, 255, 255]):
         self.morph_op = morph_op
         self.edge_det = edge_det
         self.track_method = track_method
@@ -36,7 +40,8 @@ class FingerTracker:
         img_hsv = cv2.cvtColor(img_in, cv2.COLOR_BGR2HSV)
 
         # Smooth the image
-        img_smoothed = cv2.GaussianBlur(img_hsv, (5, 5), 0)
+        #img_smoothed = cv2.GaussianBlur(img_hsv, (11, 11), 0)
+        img_smoothed = img_hsv
 
         # Skin Color Segmentation CHANGEABLE MIN/MAX
         img_segm = cv2.inRange(img_smoothed, self.min_skin_hsv, self.max_skin_hsv)
@@ -46,7 +51,7 @@ class FingerTracker:
         drawn_img_template.save('../results/intermediate/segmented.png')
 
         # Morphological operator to enhance segmentation CHANGEABLE MO and SE SIZE
-        SE = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (20, 20))
+        SE = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
         img_mo = cv2.erode(img_segm, SE, iterations=2)
         img_mo = cv2.dilate(img_mo, SE, iterations=2)
         #img_mo = cv2.morphologyEx(img_segm, cv2.MORPH_OPEN, SE)
@@ -85,16 +90,16 @@ class FingerTracker:
         """
 
         # Get largest skin contour in image
-        largest_contour = self.GetContour(img_in)
+        self.largest_contour = self.GetContour(img_in)
 
         # Identify highest point in contour
-        self.topmost = tuple(largest_contour[largest_contour[:,:,1].argmin()][0])
+        self.topmost = tuple(self.largest_contour[self.largest_contour[:,:,1].argmin()][0])
 
         # Compare contour of image to gesture templates CHANGEABLE COMPARE MATCH TYPE
         # !!!! might need more than 1 gesture template
         gesture_scores = np.zeros((len(self.template_contours), ), np.float32)
         for template_i, template_contour in enumerate(self.template_contours):
-            gesture_scores[template_i] = cv2.matchShapes(largest_contour, template_contour, cv2.CONTOURS_MATCH_I2, 0.0)
+            gesture_scores[template_i] = cv2.matchShapes(self.largest_contour, template_contour, cv2.CONTOURS_MATCH_I2, 0.0)
 
         # Find the gesture template with closest contour
         self.gesture = np.argmin(gesture_scores)
@@ -106,10 +111,22 @@ class FingerTracker:
         :return: img_out: np array representing drawn BGR image
         """
         img_out = img_draw
+
+        # draw contour
+        img_out = cv2.drawContours(img_out, [self.largest_contour], 0, (0, 80, 255), 3)
+
         # If gesture is pointer
         if self.gesture == 1:
-            # Draw dot at topmost position in img_draw
-            img_out = cv2.circle(img_draw, self.topmost, 10, (0, 0, 255), 3)
+            img_out = cv2.circle(img_out, self.topmost, 10, (0, 0, 255), 3)
+            self.drawing_pts.append(self.topmost)
+
+        # Draw dot at saved drawing positions in img_draw
+        for index, drawing_pt in enumerate(self.drawing_pts):
+            if index == len(self.drawing_pts) - 1:
+                break
+            # if points close enough together
+            if math.dist(drawing_pt, self.drawing_pts[index + 1]) < img_draw.shape[0]/4:
+                img_out = cv2.line(img_out, drawing_pt, self.drawing_pts[index + 1], (0, 0, 255), 3)
 
         return img_out
 
@@ -181,7 +198,7 @@ def FingerCursor(gaussian_filter, morph_op, edge_det, track_method, match_method
     # Run Tracking
     print("Running tracking and matching")
     ft = FingerTracker(morph_op, edge_det, track_method, match_method)
-    ft.GetContour(template_imgs[0])
+    ft.GetContour(template_imgs[1])
     ft.SaveTemplate(template_imgs)
     ft.TrackandDraw(imgs_in, imgs_in, video)
 
